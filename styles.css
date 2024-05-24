@@ -1,0 +1,120 @@
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* reset margins and padding to allow for custom spacing*/
+h1, h2, h3, h4, h5, h6,
+p {
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  /* Colours */
+  --primary-colour: hsl(75, 94%, 57%);
+  --white-colour: hsl(0, 0%, 100%);
+  --grey-colour: #333333;
+  --grey-drk-colour: #1f1f1f;
+  --black-colour: hsl(0, 0%, 8%);
+
+  /* Typography */
+  --font-size-body: 0.875rem; /* based on 14px*/
+  --font-size-heading: 1.5rem; /*24px*/
+  --font-primary: "Inter", sans-serif;
+  --font-weight-400: 400;
+  --font-weight-600: 600;
+  --font-weight-700: 700;
+
+  /* spacing */
+  --spacing-xs: 0.625rem; /*based on 10px*/
+  --spacing-s: 0.9375rem; /*based on 15px*/
+  --spacing-med: 1.125rem; /*18px*/
+  --spacing-lg: 1.5rem; /*24px*/
+  --spacing-xl: 1.875rem; /*30px*/
+  --spacing-xxl: 2.5rem; /*40px*/
+  --spacing-circle: 15rem; /*makes fully round border*/
+}
+
+body {
+  font-size: var(--font-size-body);
+  color: var(--white-colour);
+  background-color: var(--black-colour);
+  font-family: var(--font-primary);
+  font-weight: var(--font-weight-400);
+  margin: 0;
+  overflow-x: hidden;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+
+.social-card {
+  text-align: center;
+  background-color: var(--grey-drk-colour);
+  border-radius: var(--spacing-s);
+  padding: clamp(var(--spacing-lg), 5vw, var(--spacing-xxl));
+  width: calc(100% - var(--spacing-xl)); 
+  max-width: 24rem; 
+}
+
+.social-card-img {
+  border-radius: var(--spacing-circle);
+  margin-bottom: var(--spacing-xl);
+}
+
+.social-card-name {
+  font-size: var(--font-size-heading);
+  font-weight: var(--font-weight-600);
+  margin-bottom: var(--spacing-xs);
+}
+
+.social-card-location {
+  color: var(--primary-colour);
+  font-weight: var(--font-weight-600);
+  margin-bottom: var(--spacing-xl);
+}
+
+.social-card-bio {
+  margin-bottom: var(--spacing-lg);
+}
+
+.social-card-links {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-s);
+  padding: 0;
+}
+
+.social-card-links li {
+  list-style-type: none;
+}
+
+.link {
+  cursor: pointer;
+  display: inline-block;
+  width: 100%;
+  color: var(--white-colour);
+  background-color: var(--grey-colour);
+  text-decoration: none;
+  padding: var(--spacing-s);
+  border-radius: var(--spacing-xs);
+  font-weight: var(--font-weight-700);
+}
+
+.link:hover, .link:active {
+  background-color: var(--primary-colour);
+  color: var(--black-colour);
+}
+
+.link:focus {
+  outline: 2px solid var(--primary-colour);
+  box-shadow: 0 0 8px var(--primary-colour);
+}
