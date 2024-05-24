@@ -3,11 +3,6 @@
 *::before,
 *::after {
   box-sizing: border-box;
-}
-
-/* reset margins and padding to allow for custom spacing*/
-h1, h2, h3, h4, h5, h6,
-p {
   margin: 0;
   padding: 0;
 }
@@ -55,7 +50,7 @@ body {
   min-height: 100vh;
 }
 
-
+/* I am experimenting with functions out of curiosity, not because they are strictly necessary for this project */
 .social-card {
   text-align: center;
   background-color: var(--grey-drk-colour);
